@@ -1,0 +1,55 @@
+.flex__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay__create__button,
+.overlay__close__button {
+  cursor: pointer;
+  padding: 0.8em 2.5em;
+  background: white;
+  color: black;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  @media (max-width: 800px) {
+    min-width: 200px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.overlay__create__button {
+  width: 250px;
+  margin: 30px auto;
+}
+.overlay__close__button {
+  width: 210px;
+  font-size: 1em;
+  color: black;
+  margin: 60px auto;
+  background-color: rgb(255, 137, 137);
+  border: 1px solid rgb(255, 137, 137);
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.overlay__create__button:hover,
+.overlay__close__button:hover {
+  background: transparent;
+  color: white;
+}
+
+.overlay__close__button:hover {
+  border: 1px solid white;
+}
+
+.error {
+  margin-top: 8px;
+  color: white;
+  opacity: 0.8;
+}
