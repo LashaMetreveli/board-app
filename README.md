@@ -1,7 +1,8 @@
 # Board Application 
 
 This project was bootstrapped with Create React App.
-Library used for boards: https://github.com/atlassian/react-beautiful-dnd.
+
+Library used to create draggable items: https://github.com/atlassian/react-beautiful-dnd.
 
 ## How To Run
 
