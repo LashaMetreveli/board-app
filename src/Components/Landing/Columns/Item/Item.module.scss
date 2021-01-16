@@ -1,0 +1,20 @@
+.column__wrapper {
+  margin: 8px;
+}
+
+.item__content,
+.item__content__active {
+  user-select: none;
+  padding: 16px;
+  margin: 0 0 8px 0;
+  min-height: 50px;
+  color: white;
+}
+
+.item__content {
+  background-color: #263b4a;
+}
+
+.item__content__active {
+  background-color: #456c86;
+}

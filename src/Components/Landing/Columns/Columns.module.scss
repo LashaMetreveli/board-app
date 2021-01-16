@@ -1,0 +1,37 @@
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    width: 50vh;
+    height: 50vh;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column__wrapper {
+  margin: 8px;
+}
+
+.column__content,
+.column__content__active {
+  padding: 4px;
+  width: 250px;
+  min-height: 500px;
+}
+
+.column__content {
+  background-color: lightgrey;
+}
+
+.column__content__active {
+  background-color: lightblue;
+}

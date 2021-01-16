@@ -1,0 +1,127 @@
+.overlay,
+.overlay__open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgb(247, 182, 1);
+  background: linear-gradient(
+    0deg,
+    rgba(67, 76, 133, 0.8) 0%,
+    rgba(130, 173, 171, 1) 100%
+  );
+  transition: 0.3s linear;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay__open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay__content {
+  position: fixed;
+  top: 10%;
+  left: 40%;
+  z-index: 5;
+  text-align: center;
+  @media (max-width: 800px) {
+    top: 5%;
+    left: 7%;
+  }
+  @media (max-width: 340px) {
+    top: 5%;
+    left: 10%;
+    margin-top: 15px;
+  }
+}
+
+.flex__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay__create__button,
+.overlay__close__button {
+  cursor: pointer;
+  padding: 0.8em 2.5em;
+  background: white;
+  color: black;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  @media (max-width: 800px) {
+    min-width: 200px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.overlay__create__button {
+  width: 250px;
+  margin: 30px auto;
+}
+.overlay__close__button {
+  width: 210px;
+  font-size: 1em;
+  color: black;
+  margin: 60px auto;
+  background-color: rgb(255, 137, 137);
+  border: 1px solid rgb(255, 137, 137);
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.overlay__create__button:hover,
+.overlay__close__button:hover {
+  background: transparent;
+  color: white;
+}
+
+.overlay__close__button:hover {
+  border: 1px solid white;
+}
+
+.close {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+  z-index: 10;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  // @media (max-width: 1000px) {
+  //   display: none;
+  // }
+}
+
+.error {
+  margin-top: 8px;
+  color: white;
+  opacity: 0.8;
+}
