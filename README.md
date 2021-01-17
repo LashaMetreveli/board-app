@@ -1,5 +1,7 @@
 # Board Application 
 
+Application url : https://board-app-d13eb.web.app/
+
 This project was bootstrapped with Create React App.
 
 Library used to create draggable items: https://github.com/atlassian/react-beautiful-dnd.
