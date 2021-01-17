@@ -69,3 +69,26 @@
   //   display: none;
   // }
 }
+
+.create__button {
+  margin-top: 50px;
+  margin-left: 100px;
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+
+  transition: all 0.5s;
+  &:hover {
+    background-color: #256e18;
+  }
+
+  @media (max-width: 1000px) {
+    width: 90%;
+    margin: 10px 20px;
+    margin-top: 20px;
+  }
+}

@@ -21,6 +21,7 @@ export default function Forms({
             ["board"]: null,
           })
         }
+        value={"Backlog"}
         property="board"
         label="Choose Board"
         options={["Backlog", "To Do", "In Progress", "Done"]}
@@ -84,12 +85,6 @@ export default function Forms({
         className={style.overlay__create__button}
       >
         Create
-      </button>
-      <button
-        onClick={() => toggleOverlay()}
-        className={style.overlay__close__button}
-      >
-        Close
       </button>
     </div>
   );

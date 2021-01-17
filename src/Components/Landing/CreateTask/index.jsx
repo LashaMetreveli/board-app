@@ -17,7 +17,7 @@ export default function CreateTask({ setColumns, columns }) {
     title: null,
     duoDate: null,
     assignedTo: null,
-    board: null,
+    board: "Backlog",
   });
 
   const clearTask = () => {
@@ -26,12 +26,12 @@ export default function CreateTask({ setColumns, columns }) {
         title: null,
         duoDate: null,
         assignedTo: null,
-        board: null,
+        board: "Backlog",
       });
     }, 500);
   };
 
-  console.log(taskData);
+  // console.log(taskData);
 
   const createTask = () => {
     if (
@@ -58,8 +58,15 @@ export default function CreateTask({ setColumns, columns }) {
       });
     } else {
       const columnName = columnsData[taskData.board].name;
-      const columnItems = columnsData[taskData.board].items;
-      columnItems.push({ id: uuid(), content: taskData.title });
+
+      const columnItems = columns[taskData.board].items;
+
+      columnItems.push({
+        id: uuid(),
+        title: taskData.title,
+        duoDate: new Date(taskData.duoDate),
+        assignedTo: taskData.assignedTo,
+      });
 
       setColumns({
         ...columns,

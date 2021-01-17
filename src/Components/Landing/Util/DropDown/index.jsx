@@ -1,14 +1,12 @@
 import style from "./DropDown.module.scss";
 
 export default function DropDown({
-  onChange,
-  value,
   options,
-  title,
   setTaskData,
   taskData,
   clearError,
   label,
+  value,
   property,
 }) {
   return (

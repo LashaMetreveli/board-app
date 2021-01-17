@@ -5,7 +5,7 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import onDragEnd from "../Util/onDragEnd";
 import Item from "./Item";
 
-export default function Columns({ columns, setColumns, itemData }) {
+export default function Columns({ columns, setColumns }) {
   return (
     <div className={style.container}>
       <DragDropContext
@@ -14,8 +14,9 @@ export default function Columns({ columns, setColumns, itemData }) {
         {Object.entries(columns).map(([columnId, column], index) => {
           return (
             <div className={style.column} key={columnId}>
-              <h2>
-                {column.name} {column.items.length}
+              <h2 className={style.column__name}>
+                {column.name}{" "}
+                {column.items.length === 0 ? "" : column.items.length}
               </h2>
               <div className={style.column__wrapper}>
                 <Droppable droppableId={columnId} key={columnId}>
@@ -31,13 +32,6 @@ export default function Columns({ columns, setColumns, itemData }) {
                         }
                       >
                         {column.items.map((item, index) => {
-                          // console.log(
-                          //   column.items.length +
-                          //     " out of " +
-                          //     itemsData.length +
-                          //     " in column: " +
-                          //     column.name
-                          // );
                           return <Item key={index} item={item} index={index} />;
                         })}
                         {provided.placeholder}
